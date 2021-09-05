@@ -1,9 +1,11 @@
 import Create{{pascalCase name}}UseCase from '@modules/{{dashCase name}}/application/use-cases/create-{{dashCase name}}.use-case';
 import I{{pascalCase name}}Repo from '@modules/{{dashCase name}}/domain/repo/{{dashCase name}}.repo';
+import {{pascalCase name}}Aggregate from '@modules/{{dashCase name}}/domain/aggregates/{{dashCase name}}.aggregate';
+import {{pascalCase name}}Model from '@modules/{{dashCase name}}/infra/models/{{dashCase name}}.model';
 
 describe('create-{{dashCase name}}.use-case', ()=> {
 
-    let repo: I{{pascalCase name}}Repo;
+    let repo: I{{pascalCase name}}Repo<{{pascalCase name}}Aggregate, {{pascalCase name}}Model>;
 
     beforeEach(() => {
         repo = {

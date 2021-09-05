@@ -2,9 +2,10 @@ import { IUseCase, Result, Logger, DomainId } from 'types-ddd';
 import Create{{pascalCase name}}Dto from './create-{{dashCase name}}.dto';
 import I{{pascalCase name}}Repo from '@modules/{{dashCase name}}/domain/repo/{{dashCase name}}.repo';
 import {{pascalCase name}}Aggregate from '@modules/{{dashCase name}}/domain/aggregates/{{dashCase name}}.aggregate';
+import {{pascalCase name}}Model from '@modules/{{dashCase name}}/infra/models/{{dashCase name}}.model';
 
 export class Create{{pascalCase name}}UseCase implements IUseCase<Create{{pascalCase name}}Dto, Result<void, string>>{
-    constructor(private readonly {{camelCase name}}Repo: I{{pascalCase name}}Repo){}
+    constructor(private readonly {{camelCase name}}Repo: I{{pascalCase name}}Repo<{{pascalCase name}}Aggregate, {{pascalCase name}}Model>){}
 
     async execute(dto: Create{{pascalCase name}}Dto): Promise<Result<void, string>> {
         try {

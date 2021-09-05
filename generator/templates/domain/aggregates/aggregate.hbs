@@ -6,7 +6,7 @@ export interface {{pascalCase name}}AggregateProps extends BaseDomainEntity {
 
 export class {{pascalCase name}}Aggregate extends AggregateRoot<{{pascalCase name}}AggregateProps> {
     private constructor(props: {{pascalCase name}}AggregateProps) {
-        super(props, {{pascalCase name}}Aggregate.name)
+        super(props, {{pascalCase name}}Aggregate.name);
     }
 
     get key (): string {
