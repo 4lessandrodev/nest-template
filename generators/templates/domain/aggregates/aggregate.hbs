@@ -1,0 +1,21 @@
+import { AggregateRoot, Result, BaseDomainEntity } from 'types-ddd';
+
+export interface {{pascalCase name}}AggregateProps extends BaseDomainEntity {
+    key: string;
+}
+
+export class {{pascalCase name}}Aggregate extends AggregateRoot<{{pascalCase name}}AggregateProps> {
+    private constructor(props: {{pascalCase name}}AggregateProps) {
+        super(props, {{pascalCase name}}Aggregate.name)
+    }
+
+    get key (): string {
+        return this.props.key;
+    }
+
+    public static create(props: {{pascalCase name}}AggregateProps): Result<{{pascalCase name}}Aggregate> {
+        return Result.ok(new {{pascalCase name}}Aggregate(props));
+    }
+}
+
+export default {{pascalCase name}}Aggregate;

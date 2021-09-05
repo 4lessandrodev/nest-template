@@ -1,0 +1,8 @@
+import { Filter } from 'types-ddd';
+
+export interface I{{pascalCase name}}Repo<Aggregate, Model> {
+    save: (aggregate: Aggregate) => Promise<void>;
+    findMany: (filter: Filter<Partial<Model>>) => Promise<Aggregate[]>;
+}
+
+export default I{{pascalCase name}}Repo;

@@ -1,0 +1,28 @@
+import { ValueObject, Result } from 'types-ddd';
+
+export interface {{pascalCase name}}VOProps {
+    value: string;
+}
+
+export class {{pascalCase name}}ValueObject extends ValueObject<{{pascalCase name}}VOProps> {
+    private constructor(props: {{pascalCase name}}VOProps) {
+        super(props)
+    }
+
+    public static isValidValue (value: string): boolean {
+        return value.length > 0;
+    }
+
+    public static create(value: string): Result<{{pascalCase name}}ValueObject> {
+
+        const isValidValue = {{pascalCase name}}ValueObject.isValidValue(value);
+
+        if (!isValidValue) {
+            return Result.fail('Invalid Value For {{pascalCase name}}ValueObject');
+        }
+
+        return Result.ok(new {{pascalCase name}}ValueObject({ value }));
+    }
+}
+
+export default {{pascalCase name}}ValueObject;

@@ -1,0 +1,19 @@
+import { IMapper } from 'types-ddd';
+import {{pascalCase name}}Aggregate from '@modules/{{dashCase name}}/domain/aggregates/{{dashCase name}}.aggregate';
+import {{pascalCase name}}Model from '@modules/{{dashCase name}}/infra/models/{{dashCase name}}.model';
+import {{pascalCase name}}Repo from '@modules/{{dashCase name}}/infra/repo/{{dashCase name}}.repo';
+import {{pascalCase name}}Mapper from '@modules/{{dashCase name}}/infra/mappers/{{dashCase name}}.mapper';
+
+describe('{{dashCase name}}.repo', () => {
+
+    let mapper: IMapper<{{pascalCase name}}Aggregate, {{pascalCase name}}Model>;
+
+    beforeAll(() => {
+        mapper = new {{pascalCase name}}Mapper();
+    });
+
+    it('should be defined', () => {
+        const repo = new {{pascalCase name}}Repo(mapper);
+        expect(repo).toBeDefined();
+    });
+});

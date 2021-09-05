@@ -1,0 +1,17 @@
+import { Entity, Result, BaseDomainEntity } from 'types-ddd';
+
+export interface {{pascalCase name}}EntityProps extends BaseDomainEntity {
+    key: string;
+}
+
+export class {{pascalCase name}}Entity extends Entity<{{pascalCase name}}EntityProps> {
+    private constructor(props: {{pascalCase name}}EntityProps) {
+        super(props, {{pascalCase name}}Entity.name)
+    }
+
+    public static create(props: {{pascalCase name}}EntityProps): Result<{{pascalCase name}}Entity> {
+        return Result.ok(new {{pascalCase name}}Entity(props));
+    }
+}
+
+export default {{pascalCase name}}Entity;

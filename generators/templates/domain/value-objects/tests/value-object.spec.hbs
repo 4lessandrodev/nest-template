@@ -1,0 +1,9 @@
+import {{pascalCase name}}ValueObject from '@modules/{{dashCase name}}/domain/value-objects/{{dashCase name}}.value-object';
+
+describe('{{dashCase name}}.value-object', ()=> {
+
+    it('should be defined', ()=> {
+        const valueObject = {{pascalCase name}}ValueObject.create;
+        expect(valueObject).toBeDefined();
+    });
+});

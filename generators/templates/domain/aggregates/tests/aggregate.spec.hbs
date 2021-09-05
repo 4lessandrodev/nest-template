@@ -1,0 +1,9 @@
+import {{pascalCase name}}Aggregate from '@modules/{{dashCase name}}/domain/aggregates/{{dashCase name}}.aggregate';
+
+describe('{{dashCase name}}.aggregate', ()=> {
+
+    it('should be defined', ()=> {
+        const aggregate = {{pascalCase name}}Aggregate.create;
+        expect(aggregate).toBeDefined();
+    });
+});

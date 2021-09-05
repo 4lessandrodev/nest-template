@@ -1,0 +1,9 @@
+import {{pascalCase name}}Entity from '@modules/{{dashCase name}}/domain/entities/{{dashCase name}}.entity';
+
+describe('{{dashCase name}}.entity', ()=> {
+
+    it('should be defined', ()=> {
+        const entity = {{pascalCase name}}Entity.create;
+        expect(entity).toBeDefined();
+    });
+});

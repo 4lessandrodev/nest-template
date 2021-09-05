@@ -1,0 +1,28 @@
+import { IUseCase, Result, Logger, DomainId } from 'types-ddd';
+import Create{{pascalCase name}}Dto from './create-{{dashCase name}}.dto';
+import I{{pascalCase name}}Repo from '@modules/{{dashCase name}}/domain/repo/{{dashCase name}}.repo';
+import {{pascalCase name}}Aggregate from '@modules/{{dashCase name}}/domain/aggregates/{{dashCase name}}.aggregate';
+
+export class Create{{pascalCase name}}UseCase implements IUseCase<Create{{pascalCase name}}Dto, Result<void, string>>{
+    constructor(private readonly {{camelCase name}}Repo: I{{pascalCase name}}Repo){}
+
+    async execute(dto: Create{{pascalCase name}}Dto): Promise<Result<void, string>> {
+        try {
+            const aggregateOrError = {{pascalCase name}}Aggregate.create({
+                ID: DomainId.create(),
+                key: dto.key
+            });
+            if (aggregateOrError.isFailure){
+                return Result.fail(aggregateOrError.errorValue());
+            }
+            const aggregate = aggregateOrError.getResult();
+            await this.{{camelCase name}}Repo.save(aggregate);
+            return Result.success();
+        } catch (error: any) {
+            Logger.error(error.message);
+            return Result.fail('Internal Server Error on Create{{pascalCase name}}UseCase', 'INTERNAL_SERVER_ERROR');
+        }
+    }
+}
+
+export default Create{{pascalCase name}}UseCase;

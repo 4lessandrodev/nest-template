@@ -1,0 +1,19 @@
+import Create{{pascalCase name}}UseCase from '@modules/{{dashCase name}}/application/use-cases/create-{{dashCase name}}.use-case';
+import I{{pascalCase name}}Repo from '@modules/{{dashCase name}}/domain/repo/{{dashCase name}}.repo';
+
+describe('create-{{dashCase name}}.use-case', ()=> {
+
+    let repo: I{{pascalCase name}}Repo;
+
+    beforeEach(() => {
+        repo = {
+            save: jest.fn(),
+            findMany: jest.fn()
+        }
+    });
+
+    it('should be defined', () => {
+        const useCase = new Create{{pascalCase name}}UseCase(repo);
+        expect(useCase).toBeDefined();
+    });
+});
