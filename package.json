@@ -21,7 +21,7 @@
     "test:e2e": "jest --config ./test/jest-e2e.json",
     "prepare": "husky install",
     "postinstall": "husky install",
-    "generate": "yarn plop --plopfile ./generators/plopfile.js"
+    "generate": "yarn plop --plopfile ./generator/plopfile.js"
   },
   "dependencies": {
     "@nestjs/common": "^8.0.0",
