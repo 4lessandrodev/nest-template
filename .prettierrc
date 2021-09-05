@@ -6,5 +6,7 @@
   "useTabs": true,
   "bracketSpacing": true,
   "semi": true,
-  "spaceBeforeFunctionParen": true
+  "embeddedLanguageFormatting": "auto",
+  "arrowParens": "always",
+  "cursorOffset": -1
 }
