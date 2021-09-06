@@ -1,0 +1,12 @@
+import { ArgsType, Field, Int } from '@nestjs/graphql';
+
+@ArgsType()
+class Get{{pascalCase name}}Args {
+	@Field(()=> Int, { nullable: false })
+	id!: number;
+
+	@Field({ defaultValue: '' })
+	name?: string;
+}
+
+export default Get{{pascalCase name}}Args;

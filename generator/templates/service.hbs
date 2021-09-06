@@ -1,0 +1,24 @@
+import { Injectable, Inject } from '@nestjs/common';
+import {{pascalCase name}}Model from '@modules/{{dashCase name}}/infra/models/{{dashCase name}}.model';
+import Create{{pascalCase name}}UseCase from '@modules/{{dashCase name}}/application/use-cases/create-{{dashCase name}}.use-case';
+import Create{{pascalCase name}}Dto from '@modules/{{dashCase name}}/application/use-cases/create-{{dashCase name}}.dto';
+
+@Injectable()
+export class {{pascalCase name}}Service {
+	private readonly {{camelCase name}}: {{pascalCase name}}Model[] = [];
+
+	constructor(
+		@Inject(Create{{pascalCase name}}UseCase)
+		private readonly create{{pascalCase name}}UseCase: Create{{pascalCase name}}UseCase
+	){}
+
+	async create (dto: Create{{pascalCase name}}Dto): Promise<void> {
+		await this.create{{pascalCase name}}UseCase.execute(dto);
+	}
+
+	findAll (): {{pascalCase name}}Model[] {
+		return this.{{camelCase name}};
+	}
+}
+
+export default {{pascalCase name}}Service;

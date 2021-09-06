@@ -1,0 +1,9 @@
+import { InputType, Field } from '@nestjs/graphql';
+
+@InputType()
+export class Create{{pascalCase name}}Input {
+	@Field(() => String, { nullable: false })
+	name!: string;
+}
+
+export default Create{{pascalCase name}}Input;

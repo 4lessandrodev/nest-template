@@ -4,15 +4,19 @@ import {{pascalCase name}}Aggregate from '@modules/{{dashCase name}}/domain/aggr
 import {{pascalCase name}}Model from '@modules/{{dashCase name}}/infra/models/{{dashCase name}}.model';
 
 export class {{pascalCase name}}Repo implements I{{pascalCase name}}Repo<{{pascalCase name}}Aggregate, {{pascalCase name}}Model> {
-    constructor(
+	constructor (
         private readonly mapper: IMapper<{{pascalCase name}}Aggregate, {{pascalCase name}}Model>
-    ){}
-    async save (aggregate: {{pascalCase name}}Aggregate): Promise<void>{
-        throw new Error("Method not implemented");
-    };
-    async findMany (filter: Filter<Partial<{{pascalCase name}}Model>>): Promise<{{pascalCase name}}Aggregate[]>{
-        throw new Error("Method not implemented");
-    };
+	) {
+		console.log(this.mapper);
+	}
+
+	async save (_aggregate: {{pascalCase name}}Aggregate): Promise<void> {
+		throw new Error('Method not implemented');
+	};
+
+	async findMany (_filter: Filter<Partial<{{pascalCase name}}Model>>): Promise<{{pascalCase name}}Aggregate[]> {
+		throw new Error('Method not implemented');
+	};
 }
 
 export default {{pascalCase name}}Repo;

@@ -1,6 +1,6 @@
 {
   "name": "template",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "Template to start a new app using nestjs and graphql",
   "author": "4lessandrodev",
   "private": true,
@@ -21,7 +21,8 @@
     "test:e2e": "jest --config ./test/jest-e2e.json",
     "prepare": "husky install",
     "postinstall": "husky install",
-    "generate": "yarn plop --plopfile ./generator/plopfile.js"
+    "generate": "yarn plop --plopfile ./generator/plopfile.js",
+    "postgenerate": "eslint \"{src,tests}/**/*.ts\" --fix"
   },
   "dependencies": {
     "@nestjs/common": "^8.0.0",

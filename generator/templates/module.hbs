@@ -1,0 +1,17 @@
+import { Module } from '@nestjs/common';
+import {{pascalCase name}}Resolver from '@modules/{{dashCase name}}/infra/graphql/{{dashCase name}}.resolver';
+import {{pascalCase name}}Service from '@modules/{{dashCase name}}/{{dashCase name}}.service';
+import Create{{pascalCase name}}UseCase from '@modules/{{dashCase name}}/application/use-cases/create-{{dashCase name}}.use-case';
+import {{pascalCase name}}Repo from '@modules/{{dashCase name}}/infra/repo/{{dashCase name}}.repo';
+import {{pascalCase name}}Mapper from '@modules/{{dashCase name}}/infra/mappers/{{dashCase name}}.mapper';
+
+@Module({
+	providers: [
+		{{pascalCase name}}Mapper,
+		{{pascalCase name}}Repo,
+		Create{{pascalCase name}}UseCase,
+		{{pascalCase name}}Service,
+		{{pascalCase name}}Resolver
+	]
+})
+export class {{pascalCase name}}Module {}

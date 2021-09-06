@@ -1,0 +1,36 @@
+import { Inject } from '@nestjs/common';
+import { Args, Mutation, Query, Resolver } from '@nestjs/graphql';
+import {{pascalCase name}}Type from '@modules/{{dashCase name}}/infra/graphql/types/{{dashCase name}}.type';
+import Get{{pascalCase name}}Args from '@modules/{{dashCase name}}/infra/graphql/args/get-{{dashCase name}}.arg';
+import {{pascalCase name}}Service from '@modules/{{dashCase name}}/{{dashCase name}}.service';
+import Create{{pascalCase name}}Input from '@modules/{{dashCase name}}/infra/graphql/inputs/create-{{dashCase name}}.input';
+
+@Resolver(() => {{pascalCase name}}Type 	)
+export class {{pascalCase name}}Resolver {	
+
+	constructor(
+		@Inject({{pascalCase name}}Service)
+		private readonly service: {{pascalCase name}}Service
+	){}
+
+	@Mutation(() => Boolean)
+	async create{{pascalCase name}} (
+		@Args('Create{{pascalCase name}}Input') input: Create{{pascalCase name}}Input
+	): Promise<boolean> {
+		await this.service.create({ key: input.name });
+		return true;
+	}
+
+	@Query(() => {{pascalCase name}}Type)
+	async get{{pascalCase name}} (
+		@Args('input', { type: () => Get{{pascalCase name}}Args }) input: Get{{pascalCase name}}Args
+	): Promise<{{pascalCase name}}Type> {
+		console.log('Get', input);
+		return {
+			id: 1,
+			name: 'some {{dashCase name}}'
+		};
+	}
+}
+
+export default {{pascalCase name}}Resolver;
