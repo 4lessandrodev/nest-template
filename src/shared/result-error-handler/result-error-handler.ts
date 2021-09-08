@@ -8,7 +8,7 @@ import {
 } from '@nestjs/common';
 import { Result } from 'types-ddd';
 
-export const HandlerErrorOnFailure = (result: Result<any, string>): void => {
+export const HandlerErrorOnFailure = <T = unknown, F = unknown>(result: Result<T, F>): Result<T, F> => {
 	if (result.isFailure) {
 		switch (result.isFailure) {
 		case result.statusCode === 'CONFLICT':
@@ -29,6 +29,7 @@ export const HandlerErrorOnFailure = (result: Result<any, string>): void => {
 			throw new InternalServerErrorException(result.errorValue());
 		}
 	}
+	return result;
 };
 
 export default HandlerErrorOnFailure;
