@@ -1,6 +1,7 @@
 import { ArgsType, Field, Int } from '@nestjs/graphql';
 
 @ArgsType()
+@InputType()
 class Get{{pascalCase name}}Args {
 	@Field(()=> Int, { nullable: false })
 	id!: number;
