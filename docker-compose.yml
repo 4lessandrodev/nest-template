@@ -52,7 +52,7 @@ services:
     volumes: 
       - ./data/postgres:/var/lib/postgresql/data
     ports:
-      - 5432:5432
+      - ${PSQL_PORT}:${PSQL_PORT}
     environment:
       POSTGRES_MULTIPLE_DATABASES: ${DB_NAME}
       POSTGRES_PASSWORD: ${PSQL_PASSWORD}
