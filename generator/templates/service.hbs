@@ -2,6 +2,7 @@ import { Injectable, Inject } from '@nestjs/common';
 import {{pascalCase name}}Model from '@modules/{{dashCase name}}/infra/models/{{dashCase name}}.model';
 import Create{{pascalCase name}}UseCase from '@modules/{{dashCase name}}/application/use-cases/create-{{dashCase name}}.use-case';
 import Create{{pascalCase name}}Dto from '@modules/{{dashCase name}}/application/use-cases/create-{{dashCase name}}.dto';
+import HandlerErrorOnFailure from '@shared/result-error-handler/result-error-handler';
 
 @Injectable()
 export class {{pascalCase name}}Service {
@@ -13,7 +14,7 @@ export class {{pascalCase name}}Service {
 	){}
 
 	async create (dto: Create{{pascalCase name}}Dto): Promise<void> {
-		await this.create{{pascalCase name}}UseCase.execute(dto);
+		HandlerErrorOnFailure(await this.create{{pascalCase name}}UseCase.execute(dto));
 	}
 
 	findAll (): {{pascalCase name}}Model[] {

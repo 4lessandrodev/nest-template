@@ -16,6 +16,7 @@
     "testEnvironment": "node",
 	"moduleNameMapper": {
 		"@modules/(.*)": "<rootDir>/modules/$1",
-		"@config/(.*)": "<rootDir>/config/$1"
+		"@config/(.*)": "<rootDir>/config/$1",
+		"@shared/(.*)": "<rootDir>/shared/$1"
 	}
 }
