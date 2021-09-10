@@ -1,11 +1,11 @@
 import { ValueObject, Result } from 'types-ddd';
 
-export interface {{pascalCase name}}VOProps {
+export interface {{pascalCase name}}Props {
     value: string;
 }
 
-export class {{pascalCase name}}ValueObject extends ValueObject<{{pascalCase name}}VOProps> {
-    private constructor(props: {{pascalCase name}}VOProps) {
+export class {{pascalCase name}}ValueObject extends ValueObject<{{pascalCase name}}Props> {
+    private constructor(props: {{pascalCase name}}Props) {
         super(props)
     }
 
