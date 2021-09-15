@@ -3,6 +3,7 @@ import {{pascalCase name}}Model from '@modules/{{dashCase name}}/infra/models/{{
 import Create{{pascalCase name}}UseCase from '@modules/{{dashCase name}}/application/use-cases/create-{{dashCase name}}.use-case';
 import Create{{pascalCase name}}Dto from '@modules/{{dashCase name}}/application/use-cases/create-{{dashCase name}}.dto';
 import HandlerErrorOnFailure from '@shared/result-error-handler/result-error-handler';
+import { Result } from 'types-ddd';
 
 @Injectable()
 export class {{pascalCase name}}Service {
@@ -13,8 +14,8 @@ export class {{pascalCase name}}Service {
 		private readonly create{{pascalCase name}}UseCase: Create{{pascalCase name}}UseCase
 	){}
 
-	async create (dto: Create{{pascalCase name}}Dto): Promise<void> {
-		HandlerErrorOnFailure(await this.create{{pascalCase name}}UseCase.execute(dto));
+	async create (dto: Create{{pascalCase name}}Dto): Promise<Result<void>> {
+		return HandlerErrorOnFailure(await this.create{{pascalCase name}}UseCase.execute(dto));
 	}
 
 	findAll (): {{pascalCase name}}Model[] {

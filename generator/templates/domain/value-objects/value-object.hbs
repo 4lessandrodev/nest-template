@@ -9,6 +9,10 @@ export class {{pascalCase name}}ValueObject extends ValueObject<{{pascalCase nam
         super(props)
     }
 
+    get value(): string {
+        return this.props.value;
+    }
+
     public static isValidValue (value: string): boolean {
         return value.length > 0;
     }
