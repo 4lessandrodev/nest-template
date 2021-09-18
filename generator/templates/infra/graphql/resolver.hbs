@@ -17,8 +17,8 @@ export class {{pascalCase name}}Resolver {
 	async create{{pascalCase name}} (
 		@Args('Create{{pascalCase name}}Input') input: Create{{pascalCase name}}Input
 	): Promise<boolean> {
-		await this.service.create({ key: input.name });
-		return true;
+		const result = await this.service.create({ key: input.name });
+		return result.isSuccess;
 	}
 
 	@Query(() => {{pascalCase name}}Type)
