@@ -1158,7 +1158,7 @@
   resolved "https://registry.yarnpkg.com/@types/minimatch/-/minimatch-3.0.5.tgz#1001cc5e6a3704b83c236027e77f2f58ea010f40"
   integrity sha512-Klz949h02Gz2uZCMGwDUSDS1YBlTdDDgbWHi+81l29tQALUtvz4rAYi5uoVhE5Lagoq6DeqAUlbrHvW/mXDgdQ==
 
-"@types/node@*", "@types/node@^16.0.0":
+"@types/node@*":
   version "16.9.4"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-16.9.4.tgz#a12f0ee7847cf17a97f6fdf1093cb7a9af23cca4"
   integrity sha512-KDazLNYAGIuJugdbULwFZULF9qQ13yNWEBFnfVpqlpgAAo6H/qnM9RjBgh0A0kmHf3XxAKLdN5mTIng9iUvVLA==
@@ -1167,6 +1167,11 @@
   version "10.17.60"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-10.17.60.tgz#35f3d6213daed95da7f0f73e75bcc6980e90597b"
   integrity sha512-F0KIgDJfy2nA3zMLmWGKxcH2ZVEtCZXHHdOQs2gSaQ27+lNeEfGxzkIw90aXswATX7AZ33tahPbzy6KAfUreVw==
+
+"@types/node@^16.0.0":
+  version "16.9.6"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-16.9.6.tgz#040a64d7faf9e5d9e940357125f0963012e66f04"
+  integrity sha512-YHUZhBOMTM3mjFkXVcK+WwAcYmyhe1wL4lfqNtzI0b3qAy7yuSetnM7QJazgE5PFmgVTNGiLOgRFfJMqW7XpSQ==
 
 "@types/parse-json@^4.0.0":
   version "4.0.0"
@@ -7436,10 +7441,10 @@ typedarray@^0.0.6:
   resolved "https://registry.yarnpkg.com/typedarray/-/typedarray-0.0.6.tgz#867ac74e3864187b1d3d47d996a78ec5c8830777"
   integrity sha1-hnrHTjhkGHsdPUfZlqeOxciDB3c=
 
-types-ddd@^2.5.0:
-  version "2.5.1"
-  resolved "https://registry.yarnpkg.com/types-ddd/-/types-ddd-2.5.1.tgz#0aa10881e5e0e7fe32af9dba5638d2219a9a1cb9"
-  integrity sha512-PNjEE4zdwrKg8ckr98DlH4M9ijfWNJRksEobhvr8bFEoHDL0E4CUJLykYKldQjTMbMpxRauK5uEfjaJpSFwmxg==
+types-ddd@^2.5.3:
+  version "2.5.3"
+  resolved "https://registry.yarnpkg.com/types-ddd/-/types-ddd-2.5.3.tgz#1feb26e6dfc18d7d9bcf683c5921850e8f338597"
+  integrity sha512-JkfifzHuLfpkjCZopvNw3CoG54IRIgBTDff0NCf9zLWehaecjgDCbgbSVpkZ6cvR5BE8R1Jf8f/QCVChkLFk6A==
   dependencies:
     bcrypt "5.0.1"
     pino "6.13.2"
