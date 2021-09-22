@@ -4,7 +4,9 @@ import {
 	ForbiddenException,
 	InternalServerErrorException,
 	NotFoundException,
-	UnauthorizedException
+	PreconditionFailedException,
+	UnauthorizedException,
+	UnprocessableEntityException
 } from '@nestjs/common';
 import { Result } from 'types-ddd';
 
@@ -25,6 +27,13 @@ export const HandlerErrorOnFailure = <T = unknown, F = unknown>(result: Result<T
 
 		case result.statusCode === 'UNAUTHORIZED':
 			throw new UnauthorizedException(result.errorValue());
+
+		case result.statusCode === 'UNPROCESSABLE_ENTITY':
+			throw new UnprocessableEntityException(result.errorValue());
+
+		case result.statusCode === 'PRECONDITION_FAILED':
+			throw new PreconditionFailedException(result.errorValue());
+
 		default:
 			throw new InternalServerErrorException(result.errorValue());
 		}
