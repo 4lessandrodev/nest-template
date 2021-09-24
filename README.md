@@ -20,9 +20,13 @@ Template to start a new app using Nest
 
 * Clone this template
 * `$ git clone https://github.com/4lessandrodev/nest-template.git`
+* Access project folder 
+* `$ cd nest-template`
 * Create your env file on root folder
 * `$ cp ./.env.example ./.env`
 * Install dependencies
 * `$ yarn`
-* Generate your modules 
+* Start app 
+* `$ yarn start:dev`
+* Generate your module
 * `$ yarn generate <module-name>`
