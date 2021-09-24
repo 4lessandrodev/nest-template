@@ -19,7 +19,7 @@ Template to start a new app using Nest
 ## How to use this template
 
 * Clone this template
-* `$ git clone <url>`
+* `$ git clone https://github.com/4lessandrodev/nest-template.git`
 * Create your env file on root folder
 * `$ touch .env`
 * Install dependencies
