@@ -28,5 +28,10 @@ Template to start a new app using Nest
 * `$ yarn`
 * Start app 
 * `$ yarn start:dev`
+* Access playground
+* `localhost:3000/graphql`
+
+### Create new modules
+
 * Generate your module
 * `$ yarn generate <module-name>`
