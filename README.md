@@ -19,9 +19,9 @@ Template to start a new app using Nest
 ## How to use this template
 
 * Clone this template
-* `$ git clone https://github.com/4lessandrodev/nest-template.git`
+* `$ git clone https://github.com/4lessandrodev/nest-template.git <project-name>`
 * Access project folder 
-* `$ cd nest-template`
+* `$ cd <project-name>`
 * Create your env file on root folder
 * `$ cp ./.env.example ./.env`
 * Install dependencies
