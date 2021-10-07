@@ -7394,10 +7394,10 @@ typedarray@^0.0.6:
   resolved "https://registry.yarnpkg.com/typedarray/-/typedarray-0.0.6.tgz#867ac74e3864187b1d3d47d996a78ec5c8830777"
   integrity sha1-hnrHTjhkGHsdPUfZlqeOxciDB3c=
 
-types-ddd@2.6.4:
-  version "2.6.4"
-  resolved "https://registry.yarnpkg.com/types-ddd/-/types-ddd-2.6.4.tgz#0dbb74f9f7248c74d99c7adeb9a1cb1170502bd8"
-  integrity sha512-OxRB01FbDH1wmdZ2zyR439Rnftz919884Rri+kq9kP8gIh0qfymD5MyM69PbGRVd/sBH2ndHsc4p3OmbDu1Zog==
+types-ddd@^2.7.0:
+  version "2.7.0"
+  resolved "https://registry.yarnpkg.com/types-ddd/-/types-ddd-2.7.0.tgz#f94332aea428eefe99bcef4635a7f7178504c6de"
+  integrity sha512-x3ypD5AjPD+qNq/vHG9SbOlQrIiJjujRDMJi5M/Z+B+ME9LakDi/+WVOQESz08jDnJFZtjDvpw2eU9GELaI9Wg==
   dependencies:
     bcrypt "5.0.1"
     pino "6.13.2"
