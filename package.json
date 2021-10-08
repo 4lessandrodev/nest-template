@@ -27,7 +27,7 @@
   "dependencies": {
     "@nestjs/common": "8.0.11",
     "@nestjs/core": "8.0.11",
-    "@nestjs/graphql": "^9.0.4",
+    "@nestjs/graphql": "9.0.6",
     "@nestjs/mongoose": "^8.0.1",
     "@nestjs/platform-express": "8.0.11",
     "@nestjs/typeorm": "^8.0.2",
@@ -38,7 +38,7 @@
     "reflect-metadata": "^0.1.13",
     "rimraf": "^3.0.2",
     "rxjs": "7.3.1",
-    "types-ddd": "^2.7.0"
+    "types-ddd": "^2.7.1"
   },
   "devDependencies": {
     "@nestjs/cli": "^8.0.0",
@@ -61,7 +61,7 @@
     "eslint-plugin-promise": "^5.0.0",
     "git-commit-msg-linter": "^3.2.8",
     "husky": "^7.0.0",
-    "jest": "^27.1.0",
+    "jest": "27.2.5",
     "lint-staged": "11.2.0",
     "plop": "^2.7.4",
     "prettier": "^2.3.2",
