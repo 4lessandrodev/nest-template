@@ -2442,10 +2442,15 @@ color-name@~1.1.4:
   resolved "https://registry.yarnpkg.com/color-name/-/color-name-1.1.4.tgz#c2a09a87acbde69543de6f63fa3995c826c536a2"
   integrity sha512-dOy+3AuW3a2wNbZHIuMZpTcgjGuLU/uBL/ubcZF9OXbDo8ff4O8yVp5Bf0efS8uEoYo5q4Fx7dY9OgQGXgAsQA==
 
-colorette@^1.3.0, colorette@^1.4.0:
+colorette@^1.4.0:
   version "1.4.0"
   resolved "https://registry.yarnpkg.com/colorette/-/colorette-1.4.0.tgz#5190fbb87276259a86ad700bff2c6d6faa3fca40"
   integrity sha512-Y2oEozpomLn7Q3HFP7dpww7AtMJplbM9lGZP6RDfHqmbeRjiwRg4n6VM6j4KLmRke85uWEI7JqF17f3pqdRA0g==
+
+colorette@^2.0.0:
+  version "2.0.16"
+  resolved "https://registry.yarnpkg.com/colorette/-/colorette-2.0.16.tgz#713b9af84fdb000139f04546bd4a93f62a5085da"
+  integrity sha512-hUewv7oMjCp+wkBv5Rm0v87eJhq4woh5rSR+42YSQJKecCqgIqNkZ6lAlQms/BwHPJA5NKMRlpxPRv0n8HQW6g==
 
 colors@^1.1.2:
   version "1.4.0"
@@ -6083,24 +6088,24 @@ pify@^3.0.0:
   resolved "https://registry.yarnpkg.com/pify/-/pify-3.0.0.tgz#e5a4acd2c101fdf3d9a4d07f0dbc4db49dd28176"
   integrity sha1-5aSs0sEB/fPZpNB/DbxNtJ3SgXY=
 
-pino-abstract-transport@^0.2.0:
-  version "0.2.0"
-  resolved "https://registry.yarnpkg.com/pino-abstract-transport/-/pino-abstract-transport-0.2.0.tgz#e27d58d7bb16735c587c54e1d4efecc2cce27436"
-  integrity sha512-40sX7xrzDXsrUYr65brL0+bLm6rpZ+wCujDeeBmmZ/y5RVcPdVQsmz0bBe8NtTpELgmzmKwRRPVj1lvKjgFVHw==
+pino-abstract-transport@^0.3.0:
+  version "0.3.0"
+  resolved "https://registry.yarnpkg.com/pino-abstract-transport/-/pino-abstract-transport-0.3.0.tgz#9925d826a1b6e9a667ca43d14981d82240edd794"
+  integrity sha512-jsd59/ruahIoIU4xAdFtvk3lS9rwsDNJ7Vi0K34ATh1PEOD796SPqvydMaRk296CeTROyBG0SNCwsshN6QhxVg==
   dependencies:
     split2 "^3.2.2"
 
-pino-pretty@7.0.0:
-  version "7.0.0"
-  resolved "https://registry.yarnpkg.com/pino-pretty/-/pino-pretty-7.0.0.tgz#5a0a1e2ac0c98a4df94d421e52d3b9e19f32da56"
-  integrity sha512-lU5RpkfssYJxRI/veMGsUu7RqTUD/NDb2r+U4VIx7Dyo5vA3MbbbGMUOhAM4e02IAYXuTAa/PH56s8shstP9BA==
+pino-pretty@7.0.1:
+  version "7.0.1"
+  resolved "https://registry.yarnpkg.com/pino-pretty/-/pino-pretty-7.0.1.tgz#1e5cf4f7ddacc5b45f5308f3adf4fedb02a3ec95"
+  integrity sha512-GMcNSmkZkwZseMOkaQWgmkGBPPhSuVwDZMf85i3sbkD/rZldoYyLSyU22YcXvYoLc3usX25GLA1VN6zvzQx7MQ==
   dependencies:
     args "^5.0.1"
-    colorette "^1.3.0"
+    colorette "^2.0.0"
     dateformat "^4.5.1"
     fast-safe-stringify "^2.0.7"
     joycon "^3.0.0"
-    pino-abstract-transport "^0.2.0"
+    pino-abstract-transport "^0.3.0"
     pump "^3.0.0"
     readable-stream "^3.6.0"
     rfdc "^1.3.0"
@@ -7454,14 +7459,14 @@ typedarray@^0.0.6:
   resolved "https://registry.yarnpkg.com/typedarray/-/typedarray-0.0.6.tgz#867ac74e3864187b1d3d47d996a78ec5c8830777"
   integrity sha1-hnrHTjhkGHsdPUfZlqeOxciDB3c=
 
-types-ddd@^2.7.3:
-  version "2.7.3"
-  resolved "https://registry.yarnpkg.com/types-ddd/-/types-ddd-2.7.3.tgz#fec204a967e7f2781ab5f8ed42dfda9d70c9ea3c"
-  integrity sha512-2pAKu7dnkjraEige0Rf75a5AkmTmVixkNbFg47m4oGWOXVPgDp6jkasCJ/jgI/4aUCTEFJ1EBuSKjFKN+amSCg==
+types-ddd@^2.7.5:
+  version "2.7.5"
+  resolved "https://registry.yarnpkg.com/types-ddd/-/types-ddd-2.7.5.tgz#56688f26a4eb9abe7fcfe07c638bd273d3adf10a"
+  integrity sha512-L7IYFcbISBBXM/f5aVSRhDTpdbmJ3oNhS7aw3K+Cbycdm653u0W6LnHhW8WZapOH6jBGaq3DeaREcOexZjdXow==
   dependencies:
     bcrypt "5.0.1"
     pino "6.13.2"
-    pino-pretty "7.0.0"
+    pino-pretty "7.0.1"
 
 typescript@4.3.5:
   version "4.3.5"
