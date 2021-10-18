@@ -2,9 +2,19 @@
 	"$schema": "./node_modules/@stryker-mutator/core/schema/stryker-schema.json",
 	"packageManager": "yarn",
 	"timeoutMS": 10000,
-	"tempDirName": "stryker-tmp",
+	"commandRunner": {
+		"command": "IS_TESTING=true jest --runInBand --passWithNoTests"
+	},
+	"cleanTempDir": true,
+	"logLevel": "off",
+	"fileLogLevel": "off",
+	"clearTextReporter": {
+		"logTests": true
+	},
 	"ignorePatterns": [
-		"*/shared/*", "*/config/*", "*/main.ts"
+		"*/**/config/*",
+		"*/**/shared/*",
+		"*/**/main.ts"
 	],
 	"reporters": [
 	  "html",
@@ -15,7 +25,6 @@
 	"coverageAnalysis":"perTest",
 	"jest": {
 	  "config": {
-		"runInBand": true,
 		"rootDir": "src",
 		"testEnvironment": "node",
 		"testRegex": ".*\\.spec\\.ts$",
@@ -31,5 +40,4 @@
 	  "enableFindRelatedTests": true
 	},
 	"concurrency": 4
-  }
-  
+}

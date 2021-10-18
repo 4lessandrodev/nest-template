@@ -8,10 +8,14 @@ import {
 	UnauthorizedException,
 	UnprocessableEntityException
 } from '@nestjs/common';
-import { Result } from 'types-ddd';
+import { ErrorStatus, Result } from 'types-ddd';
 
 export const HandlerErrorOnFailure = <T = unknown, F = unknown>(result: Result<T, F>): Result<T, F> => {
-	if (result instanceof Result && result.isFailure) {
+	//
+	if (!result || result.statusCode === '' as ErrorStatus || result?.statusCode === undefined) {
+		throw new InternalServerErrorException('Could not determine status code from Result');
+	//
+	} else 	if (result instanceof Result && result.isFailure) {
 		switch (result.isFailure) {
 		case result.statusCode === 'CONFLICT':
 			throw new ConflictException(result.errorValue());

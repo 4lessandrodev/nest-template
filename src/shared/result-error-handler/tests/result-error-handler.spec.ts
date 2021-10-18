@@ -2,11 +2,6 @@ import HandlerErrorOnFailure from '../result-error-handler';
 import { Result, ErrorStatus } from 'types-ddd';
 
 describe('result-error-handler', () => {
-	it('should be defined', () => {
-		const handleChecker = HandlerErrorOnFailure;
-		expect(handleChecker).toBeDefined();
-	});
-
 	it('should return CONFLICT', () => {
 		const handleChecker = () => HandlerErrorOnFailure(Result.fail('Conflict', 'CONFLICT'));
 		expect(handleChecker).toThrowError('Conflict');
