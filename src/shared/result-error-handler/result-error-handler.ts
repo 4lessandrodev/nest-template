@@ -11,7 +11,7 @@ import {
 import { Result } from 'types-ddd';
 
 export const HandlerErrorOnFailure = <T = unknown, F = unknown>(result: Result<T, F>): Result<T, F> => {
-	if (result.isFailure) {
+	if (result instanceof Result && result.isFailure) {
 		switch (result.isFailure) {
 		case result.statusCode === 'CONFLICT':
 			throw new ConflictException(result.errorValue());
