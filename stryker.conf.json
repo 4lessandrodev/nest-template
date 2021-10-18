@@ -11,11 +11,7 @@
 	"clearTextReporter": {
 		"logTests": true
 	},
-	"ignorePatterns": [
-		"*/**/config/*",
-		"*/**/shared/*",
-		"*/**/main.ts"
-	],
+	"ignorePatterns": [ "dist", "generator" ],
 	"reporters": [
 	  "html",
 	  "clear-text",

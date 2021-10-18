@@ -1,3 +1,4 @@
+// Stryker disable all
 import * as env from 'env-var';
 const envVar = env.from(process.env, {}, env.logger);
 

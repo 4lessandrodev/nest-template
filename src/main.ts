@@ -1,3 +1,4 @@
+// Stryker disable all
 import 'module-alias/register';
 import { NestFactory } from '@nestjs/core';
 import { AppModule } from './app.module';

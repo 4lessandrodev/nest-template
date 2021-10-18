@@ -1,3 +1,4 @@
+// Stryker disable all
 import { TypeOrmModuleOptions } from '@nestjs/typeorm';
 import { MongooseModuleOptions } from '@nestjs/mongoose';
 import {
