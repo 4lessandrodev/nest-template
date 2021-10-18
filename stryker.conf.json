@@ -6,8 +6,8 @@
 		"command": "IS_TESTING=true jest --runInBand --passWithNoTests"
 	},
 	"cleanTempDir": true,
-	"logLevel": "off",
-	"fileLogLevel": "off",
+	"logLevel": "error",
+	"fileLogLevel": "error",
 	"clearTextReporter": {
 		"logTests": true
 	},
