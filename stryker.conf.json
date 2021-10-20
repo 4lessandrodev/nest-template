@@ -2,6 +2,8 @@
 	"$schema": "./node_modules/@stryker-mutator/core/schema/stryker-schema.json",
 	"packageManager": "yarn",
 	"timeoutMS": 10000,
+	"checkers": ["typescript"],
+	"tsconfigFile": "tsconfig.json",
 	"commandRunner": {
 		"command": "IS_TESTING=true jest --runInBand --passWithNoTests"
 	},
@@ -30,7 +32,8 @@
 		"moduleNameMapper": {
 		  "@modules/(.*)": "<rootDir>/modules/$1",
 		  "@config/(.*)": "<rootDir>/config/$1",
-		  "@shared/(.*)": "<rootDir>/shared/$1"
+		  "@shared/(.*)": "<rootDir>/shared/$1",
+		  "@app/(.*)": "<rootDir>/$1"
 		}
 	  },
 	  "enableFindRelatedTests": true

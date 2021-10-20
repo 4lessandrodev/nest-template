@@ -24,16 +24,24 @@ import {
 import { join } from 'path';
 import { ClientOpts } from 'redis';
 
-export const MongoDbConfig: MongooseModuleOptions = {
-	useNewUrlParser: true,
-	useUnifiedTopology: true,
-	useCreateIndex: true,
-	useFindAndModify: false,
-	dbName: DB_NAME
-};
+// MONGO CONFIGS
+export const MongoDbConfig: MongooseModuleOptions = IS_TESTING
+	? {
+		useNewUrlParser: true,
+		useUnifiedTopology: true,
+		dbName: DB_NAME
+	}
+	: {
+		useNewUrlParser: true,
+		useUnifiedTopology: true,
+		useCreateIndex: true,
+		useFindAndModify: false,
+		dbName: DB_NAME
+	};
 
 export const MongoURI = `mongodb://${MONGO_USER}:${MONGO_PASSWORD}@${MONGO_HOST}:${MONGO_PORT}/${DB_NAME}?authSource=admin`;
 
+// POSTGRES CONFIG
 export const PostgresDbConfig: TypeOrmModuleOptions = {
 	type: 'postgres',
 	host: PSQL_HOST,
@@ -71,6 +79,7 @@ export const PostgresDbConfig: TypeOrmModuleOptions = {
 	}
 };
 
+// MYSQL CONFIG
 export const MysqlDbConfig: TypeOrmModuleOptions = {
 	type: 'mysql',
 	host: MYSQL_HOST,
@@ -108,6 +117,7 @@ export const MysqlDbConfig: TypeOrmModuleOptions = {
 	}
 };
 
+// REDIS CONFIG
 export const RedisDbConfig: ClientOpts = {
 	host: REDIS_HOST,
 	password: REDIS_PASSWORD,

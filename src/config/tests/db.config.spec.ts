@@ -6,8 +6,6 @@ describe('db.config', () => {
 		expect(MongoDbConfig).toEqual({
 			useNewUrlParser: true,
 			useUnifiedTopology: true,
-			useCreateIndex: true,
-			useFindAndModify: false,
 			dbName: DB_NAME
 		});
 	});

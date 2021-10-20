@@ -5,6 +5,7 @@ Template to start a new app using Nest
 
 * NestJS
 * Jest
+* Graphql Request
 * Husky
 * Commit-Lint
 * Module-Alias
@@ -16,8 +17,13 @@ Template to start a new app using Nest
 * EnvVar
 * Env-cmd
 * Stryker Mutator
+* Graphql Codegen
+* Docker
 
 ## How to use this template
+
+Docker is configured on this repo
+Ensure you have a database or use docker-compose to up a database instance
 
 * Clone this template
 * `$ git clone https://github.com/4lessandrodev/nest-template.git <project-name>`
@@ -45,3 +51,20 @@ Template to start a new app using Nest
 * `$ yarn test:mutation`
 * End to end
 * `$ yarn test:e2e`
+
+### Generate graphql types
+
+This template is configured with graphql codegen.
+> Run application before generate types
+
+* Generate types
+* `$ yarn generate:gql`
+
+### Alias to import files
+
+Available alias to import files
+
+* From modules folder use: `@modules/...`
+* From src folder use: `@app/...`
+* From config folder use: `@config/...`
+* From shared folder use: `@shared/...`

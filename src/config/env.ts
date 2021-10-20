@@ -52,6 +52,11 @@ export const PORT = envVar.get('PORT')
 	.required()
 	.asPortNumber();
 
+export const PORT_TESTING = envVar.get('PORT_TESTING')
+	.default(4800)
+	.required()
+	.asPortNumber();
+
 export const IS_PRODUCTION = envVar.get('IS_PRODUCTION')
 	.default('false')
 	.required()

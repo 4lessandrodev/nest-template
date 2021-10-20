@@ -18,8 +18,9 @@ import {
 	REDIS_HOST,
 	PSQL_PORT,
 	PSQL_USER,
-	REDIS_PASSWORD
-} from '../env';
+	REDIS_PASSWORD,
+	PORT_TESTING
+} from '@config/env';
 
 describe('env.ts', () => {
 	it('should mongo variables be defined with default values', () => {
@@ -54,5 +55,6 @@ describe('env.ts', () => {
 		expect(IS_TESTING).toBe(true);
 		expect(IS_PRODUCTION).toBe(false);
 		expect(PORT).toBe(3000);
+		expect(PORT_TESTING).toBe(4800);
 	});
 });

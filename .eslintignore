@@ -3,3 +3,4 @@ data/
 dist/
 .vscode/
 .husky/
+src/gql-types.ts

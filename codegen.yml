@@ -1,0 +1,9 @@
+schema: http://localhost:3000/graphql
+generates:
+  ./src/gql-types.ts:
+    plugins:
+      - typescript
+      - typescript-resolvers
+    config:
+      federation: true
+      declarationKind: 'interface'
